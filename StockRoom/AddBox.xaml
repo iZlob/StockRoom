@@ -1,0 +1,47 @@
+﻿<Window x:Class="StockRoom.AddBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StockRoom"
+        mc:Ignorable="d"
+        Title="AddBox" Height="300" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center">Длина коробки</Label>
+        <Label Grid.Column="0" Grid.Row="1" HorizontalContentAlignment="Right" VerticalContentAlignment="Center">Ширина коробки</Label>
+        <Label Grid.Column="0" Grid.Row="2" HorizontalContentAlignment="Right" VerticalContentAlignment="Center">Высота коробки</Label>
+        <Label Grid.Column="0" Grid.Row="3" HorizontalContentAlignment="Right" VerticalContentAlignment="Center">Масса коробки</Label>
+        <Label Grid.Column="0" Grid.Row="4" HorizontalContentAlignment="Right" VerticalContentAlignment="Center">Дата изготовления/срок годности</Label>
+        <Label Grid.Column="0" Grid.Row="5" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"></Label>
+        <Label Grid.Column="0" Grid.Row="6" HorizontalContentAlignment="Right" VerticalContentAlignment="Center">На каком палете разместить</Label>
+
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="LBox" Width="40" Height="15" Background="AliceBlue" HorizontalContentAlignment="Left" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left"></TextBox>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="WBox" Width="40" Height="15" Background="AliceBlue" HorizontalContentAlignment="Left" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left"></TextBox>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="HBox" Width="40" Height="15" Background="AliceBlue" HorizontalContentAlignment="Left" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left"></TextBox>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="MBox" Width="40" Height="15" Background="AliceBlue" HorizontalContentAlignment="Left" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left"></TextBox>
+        <DatePicker Grid.Row="4" Grid.Column="1" x:Name="Date" Width="100" Height="30" Background="AliceBlue" HorizontalAlignment="Left" Margin="5 0 0 0"></DatePicker>
+        <WrapPanel Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" x:Name="Radios">
+            <RadioButton GroupName="DateType" Content="дата изг." IsChecked="True"/>
+            <RadioButton GroupName="DateType" Content="годен до" Margin="10 0 0 0"/>
+        </WrapPanel>
+        <ComboBox Grid.Row="6" Grid.Column="1" Width="200" Height="30" HorizontalAlignment="Left" Margin="5 0 0 0" x:Name="PalletCombo"/>
+
+        <Button Grid.Row="7" Grid.Column="0" Margin="5" Width="100" HorizontalAlignment="Right" x:Name="OkBtn" Click="OkBtn_Click">OK</Button>
+        <Button Grid.Row="7" Grid.Column="1" Margin="5" Width="100" HorizontalAlignment="Left" x:Name="CancelBtn" Click="CancelBtn_Click">Cancel</Button>
+    </Grid>
+</Window>

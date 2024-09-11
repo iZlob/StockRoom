@@ -1,0 +1,43 @@
+﻿<Window x:Class="StockRoom.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StockRoom"
+        mc:Ignorable="d"
+        Title="StockRoom" Height="450" Width="800"
+        WindowStyle="ThreeDBorderWindow"  WindowState="Maximized">
+
+    <Window.Background>
+        <ImageBrush ImageSource="/Pictures/background.jpg" Stretch="Fill" x:Name="MainImage"/>
+    </Window.Background>
+    
+    <Grid x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <Button Background="White" Width="100" Height="30" Margin="10 10 30 5" x:Name="AllPalletsBtn" Click="AllPalletsBtn_Click">Паллеты</Button>
+                    <Button Background="White" Width="100" Height="30" Margin="10 5 30 5" x:Name="Pallets_3Btn" Click="Pallets_3Btn_Click">3 паллета</Button>
+                    <Button Background="White" Width="100" Height="30" Margin="10 5 30 5" x:Name="AllBoxesBtn" Click="AllBoxesBtn_Click">Коробки</Button>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Right">
+                    <Button Background="White" Width="120" Height="30" Margin="0 10 30 5" x:Name="AddPalletBtn" Click="AddPalletBtn_Click">Добавить паллет</Button>
+                    <Button Background="White" Width="120" Height="30" Margin="0 5 30 5" x:Name="AddBoxBtn" Click="AddBoxBtn_Click">Добавить коробку</Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
